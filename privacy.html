@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Privacy Policy — Go-Synapse & Warmpondwater</title>
+    <meta name="title" content="Privacy Policy — Go-Synapse & Warmpondwater">
+    <meta name="description" content="Go-Synapse Privacy Policy: 100% offline local processing, zero telemetry, and transparent Merchant of Record payment processing via Creem.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/Go-Synapse-Icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-canvas: #06070a;
+            --bg-surface-1: #0d0f17;
+            --bg-surface-2: #131724;
+            --bg-surface-3: #1a1f30;
+            --border-subtle: #21273d;
+            --border-highlight: #333d5e;
+            --cyan-primary: #00e5ff;
+            --cyan-glow: rgba(0, 229, 255, 0.18);
+            --emerald-accent: #00e676;
+            --coral-alert: #ff1744;
+            --amber-warn: #ffb300;
+            --purple-accent: #d500f9;
+            --text-main: #f0f3fa;
+            --text-muted: #8e9bb3;
+            --text-dim: #5a647a;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-canvas);
+            color: var(--text-main);
+            line-height: 1.75;
+            letter-spacing: -0.01em;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .ambient-glow {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100vw;
+            max-width: 1300px;
+            height: 400px;
+            background: radial-gradient(circle at 50% 0%, rgba(0, 229, 255, 0.08) 0%, rgba(0, 229, 255, 0) 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Navigation Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            background: rgba(6, 7, 10, 0.85);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .nav-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.15;
+        }
+
+        .brand-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--text-main);
+            letter-spacing: -0.02em;
+        }
+
+        .brand-sub {
+            font-size: 0.62rem;
+            font-weight: 700;
+            color: var(--cyan-primary);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .nav-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--cyan-primary);
+        }
+
+        /* Legal Content Styling */
+        .legal-header {
+            padding: 60px 0 40px;
+            border-bottom: 1px solid var(--border-subtle);
+            margin-bottom: 40px;
+        }
+
+        .legal-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--cyan-primary);
+            background: rgba(0, 229, 255, 0.1);
+            border: 1px solid rgba(0, 229, 255, 0.3);
+            padding: 4px 12px;
+            border-radius: 9999px;
+            margin-bottom: 16px;
+        }
+
+        .legal-title {
+            font-size: 2.4rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .legal-meta {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        .legal-content {
+            font-size: 1.02rem;
+            color: var(--text-main);
+            padding-bottom: 80px;
+        }
+
+        .legal-content h2 {
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: #fff;
+            margin: 40px 0 16px;
+            letter-spacing: -0.02em;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .legal-content h2:first-of-type {
+            border-top: none;
+            margin-top: 0;
+        }
+
+        .legal-content h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--cyan-primary);
+            margin: 24px 0 10px;
+        }
+
+        .legal-content p {
+            margin-bottom: 18px;
+            color: #d1d7e0;
+        }
+
+        .legal-content ul, .legal-content ol {
+            margin: 0 0 20px 24px;
+            color: #d1d7e0;
+        }
+
+        .legal-content li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-box {
+            background: rgba(0, 229, 255, 0.05);
+            border: 1px solid rgba(0, 229, 255, 0.25);
+            border-radius: var(--radius-md);
+            padding: 20px 24px;
+            margin: 24px 0;
+        }
+
+        .highlight-box strong {
+            color: var(--cyan-primary);
+        }
+
+        .contact-card {
+            background: var(--bg-surface-1);
+            border: 1px solid var(--border-highlight);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            margin-top: 36px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-surface-1);
+            border-top: 1px solid var(--border-subtle);
+            padding: 40px 0;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        .footer-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--cyan-primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="ambient-glow"></div>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container">
+            <div class="nav-wrap">
+                <a href="index.html" class="brand-logo">
+                    <img src="images/Go-Synapse-Icon.png" alt="Go-Synapse Logo" width="34" height="34" style="border-radius: 8px; box-shadow: 0 0 16px rgba(0, 229, 255, 0.45); object-fit: contain;">
+                    <div class="brand-text">
+                        <span class="brand-title">Go-Synapse</span>
+                        <span class="brand-sub">WARMPONDWATER</span>
+                    </div>
+                </a>
+
+                <div class="nav-actions">
+                    <a href="index.html" class="nav-link">← Return to Home</a>
+                    <a href="terms.html" class="nav-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="legal-header">
+            <span class="legal-tag">Legal &amp; Compliance</span>
+            <h1 class="legal-title">Privacy Policy</h1>
+            <div class="legal-meta">Last Updated: August 25, 2026 &bull; Effective Date: August 25, 2026</div>
+        </div>
+
+        <article class="legal-content">
+            <div class="highlight-box">
+                <p><strong>Core Privacy Guarantee:</strong> Go-Synapse is built from the ground up for strict local loopback execution. Your source code, AST graphs, SQLite databases, and AI coding queries <strong>never leave your local workstation</strong>. We operate zero cloud analytics, zero code telemetry, and zero outbound data exfiltration.</p>
+            </div>
+
+            <h2>1. Introduction &amp; Scope</h2>
+            <p>This Privacy Policy explains how <strong>Warmpondwater</strong> ("we", "us", "our") handles information when you visit our website (<code>warmpondwater.com</code> / <code>go-synapse.dev</code>) and when you purchase or use the <strong>Go-Synapse</strong> software application ("Software", "Product").</p>
+            <p>We are committed to transparent data practices, privacy by design, and strict data minimization.</p>
+
+            <h2>2. What We Do NOT Collect (Zero Code Telemetry)</h2>
+            <p>When you run the Go-Synapse binary on your computer:</p>
+            <ul>
+                <li><strong>No Source Code Uploads:</strong> All AST parsing (via embedded C-Tree-sitter), static taint analysis, control flow graph (CFG) generation, and SQLite indexing occur 100% locally in your device's memory and local disk (<code>127.0.0.1:8080</code>).</li>
+                <li><strong>No AI Prompt or Query Interception:</strong> When AI agents (e.g. Claude Code, Cursor, AntiGravity) interact with Go-Synapse via the Model Context Protocol (MCP), communication occurs strictly over local <code>stdio</code> or local HTTP loopback. We cannot read, log, or access your queries or code symbols.</li>
+                <li><strong>No Background Telemetry or Tracking:</strong> The Go-Synapse binary contains zero analytics SDKs, zero user tracking beacons, and zero crash telemetries.</li>
+            </ul>
+
+            <h2>3. Payment Processing &amp; Merchant of Record (Creem.io)</h2>
+            <p>To provide secure, seamless, and globally compliant purchases, all commercial transactions, payments, invoicing, and tax handling are processed by our Merchant of Record partner, <strong>Creem.io</strong> (operated by Creem Payments Ltd).</p>
+            <ul>
+                <li><strong>Merchant of Record:</strong> Creem acts as the legal Merchant of Record for all Go-Synapse purchases. When you purchase a license, you enter into a transaction with Creem, who handles payment processing, VAT/GST compliance in 190+ countries, and license key issuance.</li>
+                <li><strong>Payment Information:</strong> We do <strong>not</strong> collect, store, or have access to your credit card numbers, debit card details, or sensitive banking credentials. All payment information is captured directly and securely by Creem under PCI-DSS Level 1 certification.</li>
+                <li><strong>Order Information We Receive:</strong> Creem provides us with minimal purchase details necessary to fulfill your order, including your email address, purchase date, transaction ID, and issued license key.</li>
+                <li>For details on how Creem manages your data, please review the <a href="https://creem.io/privacy" target="_blank" rel="noreferrer" style="color: var(--cyan-primary);">Creem Privacy Policy</a>.</li>
+            </ul>
+
+            <h2>4. Cryptographic License Verification</h2>
+            <p>To enable offline verification for licensed users, Go-Synapse uses a cryptographic hardware-bound license engine:</p>
+            <ul>
+                <li><strong>One-Way SHA-256 Hashing:</strong> When provisioning a license via <code>synapse-pkg</code>, a deterministic 16-character SHA-256 hash is generated locally from hardware tokens (such as macOS <code>IOPlatformUUID</code> or Linux <code>/etc/machine-id</code>). Raw hardware serial numbers or system profiles are never stored or transmitted in unhashed form.</li>
+                <li><strong>Offline Caching:</strong> The resulting signed activation payload is stored locally in <code>~/.go-synapse/license.json</code>. Subsequent verification is performed entirely offline on your machine with zero runtime phone-home requirements.</li>
+            </ul>
+
+            <h2>5. Website Data &amp; Cookies</h2>
+            <p>Our website (<code>warmpondwater.com</code>) is designed to be privacy-first:</p>
+            <ul>
+                <li><strong>No Advertising or Tracking Cookies:</strong> We do not use third-party advertising cookies, retargeting pixels, or behavioral analytics trackers.</li>
+                <li><strong>Server Logs:</strong> Standard server access logs (such as IP address, user agent, requested URL, and timestamp) may be temporarily processed for basic server security, DDoS defense, and infrastructure reliability, and are routinely deleted.</li>
+            </ul>
+
+            <h2>6. Data Sharing &amp; Third Parties</h2>
+            <p>We do not sell, rent, trade, or monetize your personal data. We only share information with third parties in the following limited circumstances:</p>
+            <ul>
+                <li><strong>Merchant of Record &amp; Fulfillment:</strong> With Creem.io to process orders, generate license keys, and manage subscription lifecycles.</li>
+                <li><strong>Legal Compliance:</strong> When required by applicable law, regulation, or legal subpoena.</li>
+            </ul>
+
+            <h2>7. Data Retention &amp; Security</h2>
+            <p>We retain transaction metadata (such as your email and license key records) only as long as necessary to provide customer support, verify active software maintenance periods, and comply with tax or legal recordkeeping requirements. We implement strict cryptographic verification and security standards across our software release pipeline.</p>
+
+            <h2>8. Your Rights (GDPR &amp; CCPA/CPRA)</h2>
+            <p>Depending on your location, you have statutory rights regarding your personal information, including:</p>
+            <ul>
+                <li><strong>Right of Access:</strong> Request a copy of the personal information we hold about you (e.g. order records).</li>
+                <li><strong>Right to Rectification:</strong> Request correction of inaccurate information (e.g. updating your license delivery email).</li>
+                <li><strong>Right to Erasure ("Right to be Forgotten"):</strong> Request deletion of your order records, subject to statutory tax retention obligations.</li>
+                <li><strong>Right to Non-Discrimination:</strong> We will never discriminate against you for exercising your privacy rights.</li>
+            </ul>
+
+            <div class="contact-card">
+                <h3 style="margin-top: 0; color: #fff;">9. Contact Us &amp; Data Controller</h3>
+                <p>If you have questions about this Privacy Policy, wish to exercise your privacy rights, or need customer support, please contact our team:</p>
+                <ul style="margin-bottom: 0;">
+                    <li><strong>Product:</strong> Go-Synapse</li>
+                    <li><strong>Publisher:</strong> Warmpondwater</li>
+                    <li><strong>Customer Support &amp; Privacy Inquiries:</strong> <a href="mailto:support@warmpondwater.com" style="color: var(--cyan-primary); font-weight: 600;">support@warmpondwater.com</a></li>
+                    <li><strong>Website:</strong> <a href="https://warmpondwater.com" target="_blank" rel="noreferrer" style="color: var(--cyan-primary);">https://warmpondwater.com</a></li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-wrap">
+                <div>&copy; 2026 Warmpondwater. All Rights Reserved. &bull; Go-Synapse</div>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html" style="color: var(--cyan-primary);">Privacy Policy</a></li>
+                    <li><a href="mailto:support@warmpondwater.com">Support</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Terms of Service &amp; Sale — Go-Synapse &amp; Warmpondwater</title>
+    <meta name="title" content="Terms of Service &amp; Sale — Go-Synapse &amp; Warmpondwater">
+    <meta name="description" content="Go-Synapse Terms of Service, End User License Agreement (EULA), Refund Policy, and Merchant of Record terms with Creem.io.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/Go-Synapse-Icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-canvas: #06070a;
+            --bg-surface-1: #0d0f17;
+            --bg-surface-2: #131724;
+            --bg-surface-3: #1a1f30;
+            --border-subtle: #21273d;
+            --border-highlight: #333d5e;
+            --cyan-primary: #00e5ff;
+            --cyan-glow: rgba(0, 229, 255, 0.18);
+            --emerald-accent: #00e676;
+            --coral-alert: #ff1744;
+            --amber-warn: #ffb300;
+            --purple-accent: #d500f9;
+            --text-main: #f0f3fa;
+            --text-muted: #8e9bb3;
+            --text-dim: #5a647a;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-canvas);
+            color: var(--text-main);
+            line-height: 1.75;
+            letter-spacing: -0.01em;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .ambient-glow {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100vw;
+            max-width: 1300px;
+            height: 400px;
+            background: radial-gradient(circle at 50% 0%, rgba(0, 229, 255, 0.08) 0%, rgba(0, 229, 255, 0) 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Navigation Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            background: rgba(6, 7, 10, 0.85);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .nav-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.15;
+        }
+
+        .brand-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--text-main);
+            letter-spacing: -0.02em;
+        }
+
+        .brand-sub {
+            font-size: 0.62rem;
+            font-weight: 700;
+            color: var(--cyan-primary);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .nav-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--cyan-primary);
+        }
+
+        /* Legal Content Styling */
+        .legal-header {
+            padding: 60px 0 40px;
+            border-bottom: 1px solid var(--border-subtle);
+            margin-bottom: 40px;
+        }
+
+        .legal-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--cyan-primary);
+            background: rgba(0, 229, 255, 0.1);
+            border: 1px solid rgba(0, 229, 255, 0.3);
+            padding: 4px 12px;
+            border-radius: 9999px;
+            margin-bottom: 16px;
+        }
+
+        .legal-title {
+            font-size: 2.4rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .legal-meta {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        .legal-content {
+            font-size: 1.02rem;
+            color: var(--text-main);
+            padding-bottom: 80px;
+        }
+
+        .legal-content h2 {
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: #fff;
+            margin: 40px 0 16px;
+            letter-spacing: -0.02em;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .legal-content h2:first-of-type {
+            border-top: none;
+            margin-top: 0;
+        }
+
+        .legal-content h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--cyan-primary);
+            margin: 24px 0 10px;
+        }
+
+        .legal-content p {
+            margin-bottom: 18px;
+            color: #d1d7e0;
+        }
+
+        .legal-content ul, .legal-content ol {
+            margin: 0 0 20px 24px;
+            color: #d1d7e0;
+        }
+
+        .legal-content li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-box {
+            background: rgba(0, 229, 255, 0.05);
+            border: 1px solid rgba(0, 229, 255, 0.25);
+            border-radius: var(--radius-md);
+            padding: 20px 24px;
+            margin: 24px 0;
+        }
+
+        .highlight-box strong {
+            color: var(--cyan-primary);
+        }
+
+        .refund-card {
+            background: rgba(0, 230, 118, 0.06);
+            border: 1px solid rgba(0, 230, 118, 0.35);
+            border-radius: var(--radius-md);
+            padding: 20px 24px;
+            margin: 24px 0;
+        }
+
+        .refund-card strong {
+            color: var(--emerald-accent);
+        }
+
+        .contact-card {
+            background: var(--bg-surface-1);
+            border: 1px solid var(--border-highlight);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            margin-top: 36px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-surface-1);
+            border-top: 1px solid var(--border-subtle);
+            padding: 40px 0;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        .footer-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--cyan-primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="ambient-glow"></div>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container">
+            <div class="nav-wrap">
+                <a href="index.html" class="brand-logo">
+                    <img src="images/Go-Synapse-Icon.png" alt="Go-Synapse Logo" width="34" height="34" style="border-radius: 8px; box-shadow: 0 0 16px rgba(0, 229, 255, 0.45); object-fit: contain;">
+                    <div class="brand-text">
+                        <span class="brand-title">Go-Synapse</span>
+                        <span class="brand-sub">WARMPONDWATER</span>
+                    </div>
+                </a>
+
+                <div class="nav-actions">
+                    <a href="index.html" class="nav-link">← Return to Home</a>
+                    <a href="privacy.html" class="nav-link">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="legal-header">
+            <span class="legal-tag">Legal &amp; Compliance</span>
+            <h1 class="legal-title">Terms of Service &amp; Sale</h1>
+            <div class="legal-meta">Last Updated: August 25, 2026 &bull; Effective Date: August 25, 2026</div>
+        </div>
+
+        <article class="legal-content">
+            <div class="highlight-box">
+                <p><strong>Summary:</strong> By purchasing or using <strong>Go-Synapse</strong>, you agree to these Terms of Service and End User License Agreement (EULA). All payments, billing, tax compliance, and order fulfillment are managed by our Merchant of Record partner, <strong>Creem.io</strong> (Creem Payments Ltd). We provide a <strong>14-Day 100% Satisfaction Refund Guarantee</strong> on all purchases.</p>
+            </div>
+
+            <h2>1. Acceptance of Terms</h2>
+            <p>These Terms of Service &amp; Sale ("Terms") govern your purchase and use of the <strong>Go-Synapse</strong> software binary and companion tools ("Software", "Product"), developed and published by <strong>Warmpondwater</strong> ("we", "us", "our"). By downloading, installing, purchasing, or using Go-Synapse, you agree to be bound by these Terms.</p>
+
+            <h2>2. Merchant of Record &amp; Payment Terms</h2>
+            <p>Our order process is conducted by our Merchant of Record partner, <strong>Creem.io</strong> (Creem Payments Ltd, "Creem"):</p>
+            <ul>
+                <li><strong>Merchant of Record Role:</strong> Creem is the authorized Merchant of Record for all Go-Synapse transactions. Creem collects payment, invoices customers, calculates and remits statutory VAT/GST/sales taxes, and issues cryptographic license keys upon purchase completion.</li>
+                <li><strong>Pricing &amp; Currency:</strong> Prices are displayed in EUR (&euro;5/month or &euro;50/year) or local currency as converted dynamically by Creem at checkout. Statutory taxes are calculated based on your billing jurisdiction.</li>
+                <li><strong>Payment Security:</strong> Payments are processed via PCI-DSS Level 1 compliant gateways. Warmpondwater never sees, stores, or handles credit card or banking details.</li>
+            </ul>
+
+            <h2>3. Software License Grant &amp; Activation</h2>
+            <p>Go-Synapse is licensed, not sold, to you under the following terms:</p>
+            <ul>
+                <li><strong>Evaluation Mode:</strong> Go-Synapse may be run without a license key in Evaluation Mode, which allows free personal evaluation and testing on projects with up to 50 active AST nodes.</li>
+                <li><strong>Go-Synapse Pro Subscription:</strong> Pro subscriptions are offered at <strong>&euro;5 per month</strong> (billed monthly) or <strong>&euro;50 per year</strong> (billed annually, saving 17%). A Pro subscription grants you a non-exclusive, non-transferable commercial license to run Go-Synapse without node count caps on a <strong>single (1) computing machine seat</strong> bound to your hardware machine ID.</li>
+                <li><strong>Offline Hardware Binding:</strong> Licenses are activated offline using deterministic SHA-256 machine hashing via <code>synapse-pkg provision-license</code>. License verification does not require an active internet connection during normal operation.</li>
+                <li><strong>Continuous Updates &amp; Support:</strong> Active Pro subscriptions include continuous software updates, new language grammar releases, and priority email support for the duration of the subscription.</li>
+            </ul>
+
+            <div class="refund-card" id="refunds">
+                <h3 style="margin-top: 0; color: var(--emerald-accent);">4. 14-Day 100% Refund Policy &amp; Cancellation</h3>
+                <p>We want you to be completely satisfied with Go-Synapse. We offer a transparent, customer-first refund guarantee:</p>
+                <ul>
+                    <li><strong>14-Day Money-Back Guarantee:</strong> If Go-Synapse does not meet your expectations or does not function properly in your development workflow, you may request a <strong>100% full refund within 14 calendar days</strong> of your initial purchase date.</li>
+                    <li><strong>How to Request a Refund:</strong> Simply email our support desk at <a href="mailto:support@warmpondwater.com" style="color: var(--emerald-accent); font-weight: 700;">support@warmpondwater.com</a> with your order email or transaction ID. We will promptly process your refund through Creem within 1–2 business days.</li>
+                    <li><strong>Subscription Cancellation:</strong> You may cancel your monthly or annual subscription at any time directly through the Creem Customer Portal or by contacting support. Your license remains active until the end of your prepaid billing cycle.</li>
+                </ul>
+            </div>
+
+            <h2>5. Acceptable Use &amp; Restrictions</h2>
+            <p>You agree to use Go-Synapse solely in accordance with applicable laws. You agree <strong>not</strong> to:</p>
+            <ul>
+                <li>Reverse-engineer, modify, or tamper with the cryptographic signature verification routines in <code>db/license.go</code> or bypass license limits.</li>
+                <li>Redistribute, resell, sublicense, rent, or lease your private Creem license key or cracked binaries to third parties.</li>
+                <li>Use Go-Synapse to scan or analyze software without proper authorization or permission from the copyright owner.</li>
+            </ul>
+
+            <h2>6. Third-Party Open Source Components</h2>
+            <p>Go-Synapse incorporates select permissive open-source components (including Tree-sitter parsers, Cytoscape.js, and SQLite). These components are licensed under their respective MIT/BSD/Apache/Public Domain licenses and are cataloged in full in <a href="https://github.com/warmpondwater/Go-Synapse.github.io/blob/main/THIRD_PARTY_LICENSES.txt" target="_blank" rel="noreferrer" style="color: var(--cyan-primary);">THIRD_PARTY_LICENSES.txt</a>.</p>
+
+            <h2>7. Disclaimer of Warranties &amp; Limitation of Liability</h2>
+            <p>Go-Synapse is provided "AS IS", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+            <p>To the maximum extent permitted by applicable law, in no event shall Warmpondwater or Creem Payments Ltd be liable for any special, incidental, indirect, or consequential damages whatsoever (including damages for loss of business profits, business interruption, or data corruption) arising out of the use or inability to use the Software, even if advised of the possibility of such damages. In all cases, our aggregate liability shall be limited to the amount actually paid by you for the software license.</p>
+
+            <h2>8. Customer Support Service Level</h2>
+            <p>We are committed to fast, reliable customer support:</p>
+            <ul>
+                <li><strong>Support Email:</strong> All technical, licensing, and billing inquiries can be submitted to <a href="mailto:support@warmpondwater.com" style="color: var(--cyan-primary); font-weight: 600;">support@warmpondwater.com</a>.</li>
+                <li><strong>Response Time:</strong> We commit to responding to all customer support inquiries within <strong>1 to 2 business days</strong> (well within Creem's 3-day service standard).</li>
+            </ul>
+
+            <div class="contact-card">
+                <h3 style="margin-top: 0; color: #fff;">9. Contact Information &amp; Legal Notices</h3>
+                <p>For questions regarding these Terms, licensing questions, or refund requests, please contact:</p>
+                <ul style="margin-bottom: 0;">
+                    <li><strong>Publisher:</strong> Warmpondwater</li>
+                    <li><strong>Product:</strong> Go-Synapse</li>
+                    <li><strong>Support &amp; Inquiries:</strong> <a href="mailto:support@warmpondwater.com" style="color: var(--cyan-primary); font-weight: 600;">support@warmpondwater.com</a></li>
+                    <li><strong>Merchant of Record:</strong> Creem Payments Ltd (<a href="https://creem.io" target="_blank" rel="noreferrer" style="color: var(--cyan-primary);">https://creem.io</a>)</li>
+                    <li><strong>Website:</strong> <a href="https://warmpondwater.com" target="_blank" rel="noreferrer" style="color: var(--cyan-primary);">https://warmpondwater.com</a></li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-wrap">
+                <div>&copy; 2026 Warmpondwater. All Rights Reserved. &bull; Go-Synapse</div>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="terms.html" style="color: var(--cyan-primary);">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="mailto:support@warmpondwater.com">Support</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
